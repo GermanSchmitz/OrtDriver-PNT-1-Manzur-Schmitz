@@ -1,0 +1,59 @@
+﻿@model IEnumerable<OrtDriver.Models.Conductor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Conductores</h1>
+
+<p>
+    <a asp-action="Create">Registrar Conductor</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ConductorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConductorSurname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dni)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaInscripto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConductorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConductorSurname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dni)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaInscripto)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ConductorId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.ConductorId">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.ConductorId">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
