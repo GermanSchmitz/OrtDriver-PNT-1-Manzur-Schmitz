@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\OrtDriver",
+    "\\OrtDriver\\Controllers",
+    "\\OrtDriver\\Views",
+    "\\OrtDriver\\Views\\Conductores"
+  ],
+  "SelectedNode": "\\OrtDriver\\Views\\Conductores\\Create.cshtml",
+  "PreviewInSolutionExplorer": false
+}

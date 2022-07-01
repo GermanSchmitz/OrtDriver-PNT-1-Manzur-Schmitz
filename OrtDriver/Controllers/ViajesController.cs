@@ -61,9 +61,19 @@ namespace OrtDriver.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(viaje);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                var existeViaje = from v in _context.Viajes
+                                  where v.ConductorId == viaje.ConductorId && v.FechaInscripto == viaje.FechaInscripto
+                                  select v;
+                if (!existeViaje.Any())
+                {
+                    _context.Add(viaje);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    return RedirectToAction(nameof(Index));
+                }
             }
             ViewData["ConductorId"] = new SelectList(_context.Conductores, "ConductorId", "ConductorName", viaje.ConductorId);
             return View(viaje);
@@ -102,8 +112,18 @@ namespace OrtDriver.Controllers
             {
                 try
                 {
-                    _context.Update(viaje);
-                    await _context.SaveChangesAsync();
+                    var existeViaje = from v in _context.Viajes
+                                      where v.ConductorId == viaje.ConductorId && v.FechaInscripto == viaje.FechaInscripto
+                                      select v;
+                    if (!existeViaje.Any())
+                    {
+                        _context.Update(viaje);
+                        await _context.SaveChangesAsync();
+                    }
+                    else
+                    {
+                        return RedirectToAction(nameof(Index));
+                    }                    
                 }
                 catch (DbUpdateConcurrencyException)
                 {

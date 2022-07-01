@@ -8572,11 +8572,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\CSharp_projects\\OrtDriver\\OrtDriver.csproj",
+      "projectUniqueName": "C:\\Users\\Compu\\Source\\Repos\\GermanSchmitz\\OrtDriver-PNT-1-Manzur-Schmitz\\OrtDriver\\OrtDriver.csproj",
       "projectName": "OrtDriver",
-      "projectPath": "E:\\CSharp_projects\\OrtDriver\\OrtDriver.csproj",
+      "projectPath": "C:\\Users\\Compu\\Source\\Repos\\GermanSchmitz\\OrtDriver-PNT-1-Manzur-Schmitz\\OrtDriver\\OrtDriver.csproj",
       "packagesPath": "C:\\Users\\Compu\\.nuget\\packages\\",
-      "outputPath": "E:\\CSharp_projects\\OrtDriver\\obj\\",
+      "outputPath": "C:\\Users\\Compu\\Source\\Repos\\GermanSchmitz\\OrtDriver-PNT-1-Manzur-Schmitz\\OrtDriver\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Compu\\AppData\\Roaming\\NuGet\\NuGet.Config",
