@@ -3,9 +3,10 @@
     "",
     "\\OrtDriver",
     "\\OrtDriver\\Controllers",
+    "\\OrtDriver\\Models",
     "\\OrtDriver\\Views",
-    "\\OrtDriver\\Views\\Conductores"
+    "\\OrtDriver\\Views\\Viajes"
   ],
-  "SelectedNode": "\\OrtDriver\\Views\\Conductores\\Create.cshtml",
+  "SelectedNode": "\\OrtDriver\\OrtDriver.sln",
   "PreviewInSolutionExplorer": false
 }
